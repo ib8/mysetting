@@ -39,6 +39,7 @@ background: #fff !important;
 }
 #sk_status{
 		background: #ffffff4d !important;
-    backdrop-filter: blur(10px) !important;
+    backdrop-filter: blur(2px) !important;
+    border-radius: 18px;
 }
 `;
