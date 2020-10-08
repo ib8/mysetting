@@ -1,0 +1,63 @@
+settings.scrollStepSize = 45;
+settings.smoothScroll = true;
+settings.prevLinkRegex = /((上一章节|<<|prev(ious)?)+)/i
+settings.nextLinkRegex = /((下一章节|>>|next)+)/i;
+
+addSearchAliasX('t', '谷歌翻译', 'https://translate.google.cn/#view=home&op=translate&sl=ja&tl=zh-CN&text=', 's', 'https://www.google.com/complete/search?client=chrome-omni&gs_ri=chrome-ext&oit=1&cp=1&pgcl=7&q=', function(response) {
+    var res = JSON.parse(response.text);
+    return res[1];
+});//st 谷歌翻译所选的
+
+mapkey('ot', '#8Open Search with alias t', function() {
+    Front.openOmnibar({type: "SearchEngine", extra: "t"});
+});//ot 打开谷歌翻译栏
+
+mapkey('cd', '#12Close Downloads Shelf', function() {
+    RUNTIME("closeDownloadsShelf", {clearHistory: true});
+});//cd 关闭下载栏
+
+unmap("zi");//取消了z开头的快捷键
+unmap("zo");
+unmap("zr");
+unmap("zv");
+unmap("zz");
+
+settings.theme = `
+#sk_status {
+    position: fixed;
+    bottom: 0;
+    right: 20%;
+    z-index: 2147483000;
+    padding: 4px 8px 0 8px;
+    border-radius: 20px;
+    border: 1px solid #f00;
+    font-size: 12px;
+    box-shadow: -2px 1px 15px -2px #e6e6e6;
+    background-color: #3f3f3f;
+    color: #e6e6e6;
+}
+.myHint {
+    background: #ffffff !important;
+}
+.sk_theme .annotation {
+    color: #e0e0e0;
+    font-family: "josefin sans","思源黑体 Light";
+}
+.sk_theme {
+    background: #333;
+    box-shadow: 0 0 black;
+}
+.sk_theme input {
+    color: #e6e6e6;
+}
+#sk_keystroke {
+    background-color: #404040;
+}
+.sk_theme{
+    box-shadow: 0px 0px 9px 0px #02d0ff;
+}
+.sk_theme #sk_omnibarSearchResult>ul>li:nth-child(even){
+    background: #f3f3ff;
+}
+#sk_omnibarSearchResult{/*display:none;*/}
+`;
