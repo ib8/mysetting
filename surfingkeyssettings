@@ -21,3 +21,24 @@ unmap("zo");
 unmap("zr");
 unmap("zv");
 unmap("zz");
+
+
+settings.theme = `
+#sk_hints>div {
+background: #fff !important;
+    color: #000;
+    font-size: 11px;
+    padding-top: 3px;
+    font-family: "Josefin Sans SemiBold";
+    border-radius: 12px;
+    font-variant: unset;
+    box-shadow: 0 0 30px 1px #a2a2a2;
+}
+#sk_find{
+		background: #fff0 !important;
+}
+#sk_status{
+		background: #ffffff4d !important;
+    backdrop-filter: blur(10px) !important;
+}
+`;
