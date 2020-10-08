@@ -1,7 +1,7 @@
 settings.scrollStepSize = 45;
 settings.smoothScroll = true;
-settings.prevLinkRegex = /((上一章节|<<|prev(ious)?)+)/i
-settings.nextLinkRegex = /((下一章节|>>|next)+)/i;
+settings.prevLinkRegex = /((上一章节|上一页|<<|prev(ious)?)+)/i
+settings.nextLinkRegex = /((下一章节|下一页|>>|next)+)/i;
 
 addSearchAliasX('t', '谷歌翻译', 'https://translate.google.cn/#view=home&op=translate&sl=ja&tl=zh-CN&text=', 's', 'https://www.google.com/complete/search?client=chrome-omni&gs_ri=chrome-ext&oit=1&cp=1&pgcl=7&q=', function(response) {
     var res = JSON.parse(response.text);
@@ -13,7 +13,7 @@ mapkey('ot', '#8Open Search with alias t', function() {
 });//ot 打开谷歌翻译栏
 
 mapkey('cd', '#12Close Downloads Shelf', function() {
-    RUNTIME("closeDownloadsShelf", {clearHistory: true});
+    RUNTIME("closeDownloadsShelf", {clearHistory: false});
 });//cd 关闭下载栏
 
 unmap("zi");//取消了z开头的快捷键
