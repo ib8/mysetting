@@ -35,11 +35,12 @@ background: #fff !important;
     box-shadow: 0 0 30px 1px #a2a2a2;
 }
 #sk_find{
-		background: #fff0 !important;
+	background: #fff0 !important;
 }
 #sk_status{
-		background: #ffffff4d !important;
+    background: #ffffff00 !important;
     backdrop-filter: blur(2px) !important;
     border-radius: 18px;
+    border-color: #ffffff14;
 }
 `;
