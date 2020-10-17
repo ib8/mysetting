@@ -2,6 +2,7 @@ settings.scrollStepSize = 45;
 settings.smoothScroll = true;
 settings.prevLinkRegex = /((上一章节|上一页|<<|prev(ious)?)+)/i
 settings.nextLinkRegex = /((下一章节|下一页|>>|next)+)/i;
+settings.omnibarMaxResults = 30;
 
 mapkey('cd', '#12Close Downloads Shelf', function() {
     RUNTIME("closeDownloadsShelf", {clearHistory: false});
