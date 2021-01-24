@@ -1,0 +1,35 @@
+[
+  {
+    "outboundTag": "block",
+    "domain": [
+      "geosite:category-ads-all",
+      "domain:jandan.net",
+      "domain:dmzj.com",
+      "domain:mhgui.com",
+      "domain:weibo.com"
+    ]
+  },
+  {
+    "outboundTag": "proxy",
+    "ip": [
+      "91.108.56.0/24",
+      "149.154.167.0/24",
+      "149.154.175.0/24",
+      "149.154.166.0/24"
+    ],
+    "domain": [
+      "domain:v2fly.org",
+      "geosite:wikimedia",
+      "geosite:telegram",
+      "full:www.google.com",
+      "full:www.google.com.hk",
+      "full:www.google.com.tw",
+      "full:accounts.google.com",
+      "full:mail.google.com"
+    ]
+  },
+  {
+    "port": "0-65535",
+    "outboundTag": "direct"
+  }
+]
