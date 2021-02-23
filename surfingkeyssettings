@@ -2,43 +2,65 @@ settings.scrollStepSize = 45;
 settings.smoothScroll = true;
 settings.prevLinkRegex = /((上一章节|上一页|<<|prev(ious)?)+)/i
 settings.nextLinkRegex = /((下一章节|下一页|>>|next)+)/i;
-settings.omnibarMaxResults = 16;
+settings.omnibarMaxResults = 34;
 
 mapkey('cd', '#12Close Downloads Shelf', function() {
     RUNTIME("closeDownloadsShelf", {clearHistory: false});
 });//cd 关闭下载栏
-
-
+unmap("cc");
+addSearchAliasX('m', 'manhau.dmzj.com', 'https://manhua.dmzj.com/tags/search.shtml?s=');
 settings.theme = `
-#sk_hints>div {
-background: #fff !important;
+.myHint{
+background: #ffffff !important;
     color: #000;
-    font-size: 11px;
-    padding-top: 3px;
-    font-family: "Josefin Sans SemiBold";
-    border-radius: 12px;
-    font-variant: unset;
-    box-shadow: 0 0 30px 1px #a2a2a2;
+    font-size: 12px;
+    font-family: "蘋方-簡 中粗體";
+    border-radius: 15px;
+    font-variant: traditional;
+    box-shadow: unset;
+    height: 15px;
+    text-align: center;
+    padding: 0 1px 2px 1px;
 }
-
+#sk_omnibarSearchResult li div.title {
+    font-family: Bahnschrift,"蘋方-簡 中粗體";
+    font-size: 16px;
+}
 #sk_find{
 	background: #fff0 !important;
 }
 
-#sk_status{
+#sk_status {
     background: #ffffff00 !important;
-    backdrop-filter: saturate(194%) blur(5px) !important;
     border-radius: 18px;
     border-color: #ffffff00;
+    /*bottom: -20px;
+    border: solid #ff00006b 2px;*/
+    transition: bottom 0.3s cubic-bezier(0, 0.88, 0.57, 0.94),border 0.3s cubic-bezier(0, 0.88, 0.57, 0.94);
 }
-
+#sk_status:hover ,#sk_status input:focus {
+    bottom: 0px;
+    backdrop-filter: saturate(200%) blur(1.7px);
+    border-color: #ff000000;
+}
 #sk_omnibar {
-background: #ffffffa1 !important;
+    background: #ffffffc1 !important;
     backdrop-filter: blur(4px) !important;
     box-shadow: 0px 2px 10px rgb(0 0 0 / 9%);
+    max-height: 100%;
 }
-
-.sk_theme #sk_omnibarSearchResult>ul>li:nth-child(odd) {
-    background: #fafafa3b;
+.sk_theme{color:#808080;}
+.sk_theme #sk_omnibarSearchResult ul li:nth-child(odd) {
+    background: #fafafa3d;
+}
+#sk_omnibarSearchResult ul li{border: solid 1px #ff000000;}
+.sk_theme #sk_omnibarSearchResult ul li.focused {
+    border: red solid;
+    border-width: 1px 1px 1px 5px;
+    background: unset;
+    transition: border-left-width 0.5s cubic-bezier(0.04, -0.05, 0, 2.15) 0.1s;
+}
+#sk_omnibarSearchResult {
+    max-height: 1560px;
 }
 `;
