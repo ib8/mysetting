@@ -9,6 +9,7 @@ mapkey('cd', '#12Close Downloads Shelf', function() {
 });//cd 关闭下载栏
 unmap("cc");
 addSearchAliasX('m', 'manhau.dmzj.com', 'https://manhua.dmzj.com/tags/search.shtml?s=');
+
 settings.theme = `
 .myHint{
 background: #ffffff !important;
